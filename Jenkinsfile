@@ -19,6 +19,9 @@ pipeline{
 		stage('Build'){
 			steps{
 				echo "Build"
+				echo "PATH-$PATH"
+				echo "BUILD_NUMBER- $env.BUILD_NUMBER"
+				 echo "BUILD_URL -$env.BUILD_URL "
 			}
 		}
 
@@ -30,7 +33,7 @@ pipeline{
 
 		stage('Integration Test'){
 			steps{
-				echo "Integration Test"
+				echo "Integration Test" 
 			}
 		}
 	}
